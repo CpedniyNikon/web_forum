@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
   before_save :downcase_nickname
 
+  validates :nickname, presence: true, uniqueness: true
+
   def downcase_nickname
     nickname.downcase!
   end

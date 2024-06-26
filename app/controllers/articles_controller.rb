@@ -4,8 +4,17 @@ class ArticlesController < ApplicationController
 
   def create
     article = Article.create(article_params)
+    article.user_id = current_user.id
 
-    redirect_to article_path(article)
+    debugger
+
+    if article.save
+      redirect_to root_path
+    else
+      render :new
+    end
+
+    # redirect_to article_path(article)
   end
 
   def index
@@ -23,7 +32,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:user_id, :title, :body)
+    params.require(:article).permit(:title, :body)
   end
 
 
