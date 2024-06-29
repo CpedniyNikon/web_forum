@@ -1,2 +1,9 @@
-<p><%= @article.title%></p>
-<p><%= @article.body%></p>
+<p><%= "Название:  #{@article.title}"%></p>
+<p><%= "Содержимое: #{@article.body}"%></p>
+
+<% @comments.each do |comment|%>
+<p><%= "id пользователья: #{comment.id}"%></p>
+<p><%= "Содержимое комментария: #{comment.body}"%></p>
+<% end %>
+
+<%= link_to 'Оставить комментарий', new_comment_path(article_id: @article.id) %>

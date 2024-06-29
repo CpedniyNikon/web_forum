@@ -1,7 +1,8 @@
 <%= form_with model: article do |form| %>
+  <p><%= form.hidden_field :user_id, value: session[:user_id] %></p>
   <p><%= form.label :title, 'Article title' %></p>
-  <p><%= form.text_area :title, class: 'textfield' %></p>
+  <p><%= form.text_area :title, class: 'textarea' %></p>
   <p><%= form.label :body, 'Article body' %></p>
-  <p><%= form.text_field :body %></p>
+  <p><%= form.text_area :body, class: 'textarea' %></p>
   <p><%= form.submit "#{action}" %></p>
 <%end%>

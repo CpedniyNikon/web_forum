@@ -30,3 +30,12 @@ body {
   color: white;
   text-decoration: none;
 }
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info span {
+  margin-right: 10px; /* Add space between nickname and button */
+}

@@ -3,18 +3,9 @@ class ArticlesController < ApplicationController
 
 
   def create
-    article = Article.create(article_params)
-    article.user_id = current_user.id
+    Article.create(article_params)
 
-    debugger
-
-    if article.save
-      redirect_to root_path
-    else
-      render :new
-    end
-
-    # redirect_to article_path(article)
+    redirect_to root_path
   end
 
   def index
@@ -23,6 +14,7 @@ class ArticlesController < ApplicationController
 
 
   def show
+    @comments = Comment.all
   end
 
   def new
@@ -32,7 +24,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:user_id, :title, :body)
   end
 
 

@@ -1,4 +1,6 @@
 <% @articles.each do |article|%>
-<p><%= 'Название: ' + article.title%></p>
-<p><%= 'Содержимое: ' + article.body%></p>
+<p><%= "Название: #{article.title}"%></p>
+<p><%= "Содержимое: #{article.body}"%></p>
+
+<%= link_to 'Перейти к теме', article_path(article) %>
 <% end %>

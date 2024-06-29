@@ -1,10 +1,7 @@
-
-
 <% if current_user.present? %>
   <h2> New Title </h2>
   <%= render 'form', article: @article, action: "create" %>
 <% else %>
   <h2> Зарегистрируйтесь для создания статьи </h2>
-  <%= link_to 'Sign in', new_session_path%> 
+  <%= link_to 'Зарегистрироваться', new_session_path%> 
 <% end%>
-

@@ -1,0 +1,7 @@
+<%= form_with model: comment do |form| %>
+  <p><%= form.hidden_field :user_id, value: session[:user_id] %></p>
+  <p><%= form.hidden_field :article_id, value: params[:article_id] %></p>
+  <p><%= form.label :body, 'Comment body' %></p>
+  <p><%= form.text_area :body, class: 'textarea' %></p>
+  <p><%= form.submit "#{action}" %></p>
+<%end%>

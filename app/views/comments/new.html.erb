@@ -1,0 +1,7 @@
+<% if current_user.present? %>
+  <h2> New Comment </h2>
+  <%= render 'form', comment: @comment, action: "create" %>
+<% else %>
+  <h2> Зарегистрируйтесь чтобы оставить комментарий </h2>
+  <%= link_to 'Sign in', new_session_path%> 
+<% end%>
