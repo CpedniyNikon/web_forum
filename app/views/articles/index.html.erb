@@ -1,6 +1,7 @@
 <% @articles.each do |article|%>
-<p><%= "Название: #{article.title}"%></p>
-<p><%= "Содержимое: #{article.body}"%></p>
-
-<%= link_to 'Перейти к теме', article_path(article) %>
+  <% user = @users.find_by(id: article.user_id) %>
+  <div class = "article-container">
+    <p><%= link_to "#{user.nickname} #{article.created_at.strftime('%m/%d/%y(%a)%H:%M:%S')} No.#{article.id}", article_path(article)  %></p>
+    <p><%= "#{article.title}"%></p>
+  </div>
 <% end %>

@@ -1,12 +1,11 @@
 body {
-  background: #c4c8de;
+  background: #dde1f5;
   display: flex;
   justify-content: center;
 }
 
 .wrapper {
-  max-width: 800px;
-  margin: 40px;
+  margin: 20px;
   width: 100%;
 }
 
@@ -19,7 +18,7 @@ body {
 }
 
 .navbar {
-  background-color: #ee3575;
+  background-color: #def1b7;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -37,5 +36,6 @@ body {
 }
 
 .user-info span {
-  margin-right: 10px; /* Add space between nickname and button */
+  margin-right: 10px; 
+  color: black;/* Add space between nickname and button */
 }

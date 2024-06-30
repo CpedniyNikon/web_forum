@@ -10,11 +10,13 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    @users = User.all
   end
 
 
   def show
-    @comments = Comment.all
+    @users = User.all
+    @comments = Comment.where(article_id: @article.id)
   end
 
   def new

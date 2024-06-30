@@ -1,9 +1,16 @@
-<p><%= "Название:  #{@article.title}"%></p>
-<p><%= "Содержимое: #{@article.body}"%></p>
+<div class="article-container article-show">
+  <% user = User.find_by(id: @article.user_id)%>
+  <p><%= link_to "#{user.nickname} #{@article.created_at.strftime('%m/%d/%y(%a)%H:%M:%S')} No.#{@article.id}", article_path(@article)%></p>
+  <p><%= "#{@article.title}"%></p>
+  <p><%= "#{@article.body}"%></p>
+</div>
 
 <% @comments.each do |comment|%>
-<p><%= "id пользователья: #{comment.id}"%></p>
-<p><%= "Содержимое комментария: #{comment.body}"%></p>
+  <% user = User.find_by(id: comment.user_id)%>
+  <div class ="comment-container">
+    <p><%= "#{user.nickname}"%></p>
+    <p><%= "Содержимое комментария: #{comment.body}"%></p>
+  </div>
 <% end %>
 
 <%= link_to 'Оставить комментарий', new_comment_path(article_id: @article.id) %>

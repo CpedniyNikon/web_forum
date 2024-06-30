@@ -1,0 +1,10 @@
+.article-container {
+  background-color: #d6daf0;
+  margin: 10px 0px;
+  padding: 5px 10px;
+}
+
+.article-show {
+  background-color: #dc99f0;
+  border-radius: 12px;
+}

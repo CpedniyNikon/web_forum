@@ -9,10 +9,9 @@
 }
 
 .button-main {
-  background-color: #9d0208;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
 }
 
-.button-yellow {
-  background-color: #ffba08;
-}
 
