@@ -21,8 +21,8 @@
             <%= content_tag 'span', "@#{current_user.nickname}" %>
             <%= button_to 'Выйти из аккаунта', session_path, method: :delete, class: 'button button-main' %>
           <% else %>
-            <%= link_to 'Зарегистрироваться', new_user_path, class: 'button button-main', style: "margin-right: 10px;"  %>
-            <%= link_to 'Войти в аккаунт', new_session_path, class: 'button button-main' %>
+            <%= link_to 'Зарегистрироваться', new_user_path, class: 'button button-main', style: "margin-right: 10px; color: black"  %>
+            <%= link_to 'Войти в аккаунт', new_session_path, class: 'button button-main', style: "color: black" %>
           <% end %>
         </div>
       </div>

@@ -2,6 +2,6 @@
   <h2> New Title </h2>
   <%= render 'form', article: @article, action: "create" %>
 <% else %>
-  <h2> Зарегистрируйтесь для создания статьи </h2>
-  <%= link_to 'Зарегистрироваться', new_session_path%> 
+  <h2> Войдите в аккаунт для создания статьи </h2>
+  <%= link_to 'Войти', new_session_path%> 
 <% end%>

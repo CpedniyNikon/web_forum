@@ -3,5 +3,5 @@
   <div class = "article-container">
     <p><%= link_to "#{user.nickname} #{article.created_at.strftime('%m/%d/%y(%a)%H:%M:%S')} No.#{article.id}", article_path(article)  %></p>
     <p><%= "#{article.title}"%></p>
-  </div>
+</div>
 <% end %>
